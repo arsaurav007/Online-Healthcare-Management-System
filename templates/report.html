@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Health Care Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+      {% include 'includes/_flashhelpers.html' %}
+
+  <h1>Submit Report</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <h3>Select Patient Username</h3> 
+  <form method="POST" action="">
+    <dl>
+    <dd><select name="patient_username" id="patient_username">
+        {% for j in pl %}
+        <option value="{{ j.patient_username }}">{{ j.patient_username }}</option>
+        {% endfor %}
+        </select>
+      </dd>
+      <br>
+    <div class="form-group">
+      {{render_field(form.data, class_="form-control")}}
+    </div>
+    <div><input type="submit" class="btn btn-primary" value="Submit">
+    <a href="/preset"><button type="button" class="btn btn-warning"> Reset</button></a></div>
+  </dl>
+  </form>
+
+      </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/basic/ckeditor.js"></script>
+    <script type="text/javascript">
+      CKEDITOR.replace('editor')
+    </script>
+
+</body>
+</html>

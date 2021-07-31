@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Health Care Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Online HealthCare</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#Patient">Make Appointment</a></li>
+        <li><a href="#Doctor">History</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+
+<div class="Patient container-fluid">
+  <h3><strong>Appointment Scheduling</strong></h3>
+  <p>Manage your appointments using your preferred calendar view which enables you to book online .</p>
+	<a href="/makeappt/{{ username }}"> <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span> SCHEDULE</button> </a>
+  </div>
+</div>
+<br>
+<div class="Appt History container-fluid">
+  <h3><strong>Appointment History</strong></h3>
+  <p>Our integeration gives a detailed description of all appointments booked by you .</p>
+  <div>
+  <a href="/pbook/{{ username }}"> <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span> HISTORY</button> </a>
+  </div>
+</div><br>
+<div class= "Logoutpatient container-fluid">
+  <h3><strong>Want to Logout  ?</strong></h3>
+   <p>Please click the button below.</p>
+<a href="/pout/{{ username }}"><button type="button" class="btn btn-danger btn-lg"><bold>LOGOUT</bold></button> </a>
+</div>
+
+</body>
+</html>

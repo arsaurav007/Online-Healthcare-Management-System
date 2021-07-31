@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Health Care Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Online HealthCare</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#Patient">Appointments</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>  
+
+<div class="Appt History container-fluid">
+  <h3> <strong>Check Appointments</strong></h3>
+  <p>Click the button to see your Appointment history</p>
+  <form method="POST" action="">
+    
+    <a href="/apptListdr/{{ username }}"> <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span> APPOINTMENTS</button> </a>
+
+  </form>
+</div>
+<br>
+  <div class="Report container-fluid">
+ <h3><strong>Update Report</strong></h3>
+  <p>Click the button to update Report for a Patient</p>
+  <form method="POST" action="">
+    
+    <a href="/reports/{{ username }}"> <button type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-user"></span> SUBMIT REPORT </button> </a>
+
+  </form>
+
+
+</div>
+<br>
+<div class= "Logoutdoctor container-fluid">
+  <h3><strong>Want to Logout ?</strong></h3>
+   <p>Please click the button below.</p>
+<a href="/dout/{{ username }}"><button type="button" class="btn btn-danger btn-lg"><bold>LOGOUT</bold></button> </a>
+</div>
+
+
+</body>
+</html>
